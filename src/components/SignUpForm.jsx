@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './SignUpForm.css';
 
 function SignUpForn({ setToken }) {
   const [username, setUsername] = useState("");
@@ -8,6 +9,10 @@ function SignUpForn({ setToken }) {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
+      if (username.length < 8) {
+        setError("Username must be at least 8 characters long.");
+        return;
+      }
       const response = await fetch(
         "https://fsa-jwt-practice.herokuapp.com/signup",
         {

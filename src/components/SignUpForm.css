@@ -1,0 +1,45 @@
+/* Increase spacing between form elements */
+form label {
+  margin-bottom: 10px;
+}
+
+/* Add padding to form container */
+.form-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Example color */
+}
+
+/* Add padding and border to input fields */
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+/* Style focused input fields */
+input:focus {
+  outline: none;
+  border-color: #007bff; /* Example color */
+}
+
+/* Bold labels for better visibility */
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Style submit button */
+button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Example color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for button */
+button:hover {
+  background-color: #0056b3; /* Example color */
+}
