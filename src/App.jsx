@@ -1,14 +1,14 @@
-// import { useState } from 'react'
 import './App.css'
+import Authenticate from './components/Authenticate';
+import SignUpForn from './components/SignUpForm';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
-      
+      <SignUpForn />
+      <Authenticate />
     </>
-  )
+  );
 }
 
 export default App
