@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SignUpForn() {
+function SignUpForn({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -22,7 +22,8 @@ function SignUpForn() {
         }
       );
       const result = await response.json();
-      console.log(result)
+      console.log(result) // console log to show the return object from API (includes token)
+      setToken(result.token);
     } catch (error) {
       setError(error.message);
     }
@@ -32,6 +33,7 @@ function SignUpForn() {
     <>
         <h2>Sign Up</h2>
         {error && <p>{error}</p>}
+
       <form onSubmit={handleSubmit}> 
         <label>
                 Username:           
