@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './App.css'
 import Authenticate from './components/Authenticate';
-import SignUpForn from './components/SignUpForm';
+import SignUpForm from './components/SignUpForm';
+import MyCheckbox from './components/Checkbox';
 
 function App() {
   const [token, setToken] = useState(null);
 
   return (
     <>
-      <SignUpForn token={token} setToken={setToken} />
+      <MyCheckbox />
+      <SignUpForm token={token} setToken={setToken} />
       <Authenticate token={token} setToken={setToken} />
     </>
   );

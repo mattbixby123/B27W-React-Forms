@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import './SignUpForm.css';
+import Button from '@mui/material/Button';
 
-function SignUpForn({ setToken }) {
+
+function SignUpForm({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -36,6 +38,7 @@ function SignUpForn({ setToken }) {
 
   return (
     <>
+      <Button variant="contained">Click Me!</Button>
         <h2>Sign Up</h2>
         {error && <p>{error}</p>}
 
@@ -61,4 +64,4 @@ function SignUpForn({ setToken }) {
   );
 }
 
-export default SignUpForn;
+export default SignUpForm;
